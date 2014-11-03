@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="max-age=1" http-equiv="Cache-Control">
+    <title>瑞虹新城-璟庭 优享生活 分享精彩</title>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            /*background-color: #6c6c6c;*/
+        }
+
+        .page{
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            min-width: 320px;
+            overflow: hidden;
+        }
+
+        .mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1d1c1c;
+            opacity: 0.85;
+            z-index: 100;
+            display: none;
+        }
+
+        .ruleArea{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 200;
+            display: none;
+        }
+
+        .rules{
+            position: absolute;
+            width: 100%;
+            max-height: 75%;
+            bottom: 10%;
+        }
+
+        .close{
+            position: absolute;
+            width: 22%;
+            max-height: 5%;
+            bottom: 12%;
+            left: 50%;
+            margin-left: -12%;
+        }
+
+        .bgImg{
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn1{
+            bottom: 35%;
+            left: 50%;
+            margin-left: -35%;
+            position: absolute;
+            width: 70%;
+        }
+
+        .btn2{
+            bottom: 10%;
+            left: 50%;
+            margin-left: -35%;
+            position: absolute;
+            width: 70%;
+        }
+
+    </style>
+</head>
+
+<body>
+	<div id="page" class="page">
+        <div id="mask" class="mask"></div>
+        <div id="ruleArea" class="ruleArea">
+            <img class="rules" src="images/rules.png" />
+            <img class="close" src="images/close.png" onclick="javascript:document.getElementById('mask').style.display='none';document.getElementById('ruleArea').style.display='none';"/>
+        </div>
+
+		<img class="bgImg" src="images/1bg.jpg" />
+        <img class="btn1" src="images/1btn.png" onclick="javascript:document.getElementById('mask').style.display='block';document.getElementById('ruleArea').style.display='block';"/>
+        <img class="btn2" src="images/1btn2.png" onclick="javascript:window.location.href='animate.html';">
+    </div>
+</body>
+
+<script src="js/zepto.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var shareTitle = [
+        "又有豪车又有电影票，且抢且珍惜！",
+        "极速飞车，发型不乱，真是醉了！",
+        "中国好车位，火爆开抢！"
+    ];
+//    HOME_PATH="http://activity.huazhu.com/Sars/Index?from=timeline&isappinstalled=0";
+    HOME_PATH="http://www.whatevervirus.com/rhxc/index.html?from=timeline&isappinstalled=0";
+    mebtnopenurl=HOME_PATH;
+    window.shareData = {
+        "imgUrl": "http://www.whatevervirus.com/rhxc/images/share.png",
+        "timeLineLink": "http://www.whatevervirus.com/rhxc/index.html",
+        "tTitle":"我在车位争抢大比拼中得了0分，分享到朋友圈炫耀一下吧！" ,
+        "tContent": "我在车位争抢大比拼中得了0分，分享到朋友圈炫耀一下吧！"
+    };
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+//                "desc": window.shareData.tContent,
+//                "title": window.shareData.tTitle
+                "desc": "我在车位争抢大比拼中得了"+ 0 +"分，分享到朋友圈炫耀一下吧！" ,
+                "title": shareTitle[Math.round(Math.random()*3)]
+            }, function(res) {
+                document.location.href = mebtnopenurl;
+            })
+        });
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+//                "desc": window.shareData.tContent,
+//                "title": window.shareData.tTitle
+                "desc": "我在车位争抢大比拼中得了"+ 0 +"分，分享到朋友圈炫耀一下吧！" ,
+                "title": shareTitle[Math.round(Math.random()*3)]
+            }, function(res) {
+                document.location.href = mebtnopenurl;
+            });
+        });
+    }, false);
+</script>
+</html>
