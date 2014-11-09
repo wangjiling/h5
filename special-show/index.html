@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" > <title>美宝莲极致诱惑</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animations.css">
+
+</head>
+<body style="background:#d2d2d2;overflow:hidden">
+	<div id='loading' class='loading'>
+		<div class="lgbox"><!-- <div class="typing_loader"></div> -->
+			<div class="datouwang1">
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
+			</div>
+		</div>
+	</div>
+	<div id='page1'>
+			<canvas id='canvas'></canvas>
+	</div>
+	<img src="images/start01.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/start.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/01.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/02.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/03.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/04.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/05.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/06.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/07.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/08.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/end.jpg" alt="" style="display:none;" date-note="图片预加载">
+	<img src="images/video.png" alt="" style="display:none;" date-note="图片预加载">
+	<div class="music" id="music">
+		<div class="musicIcon musicStart"></div>
+		<audio id="player" class="player" loop="loop"  src="images/midi.mp3" data="images/midi.mp3" sta='play' style='position:absolute'></audio>
+		<span class="note">打开</span>
+	</div>
+	<!-- <div class="ddi" style="position:fixed;z-index:99;color:#fff;background:rgba(0,0,0,.5);padding:10px;"></div> -->
+	<section class="m-index">
+	<!-- 开始引导页面 -->
+		<section data-page="1" class="m-page m-page1 show" name="引导一">
+			<arction class="content">
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/01.jpg');";></div>
+			</arction>
+		</section>
+		<section data-page="2" class="m-page m-page2 hide" name="引导二">
+			<arction class="content">
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/02.jpg');";></div>
+			</arction>
+		</section>
+		<section data-page="3" class="m-page m-page3 hide" name="引导三">
+			<arction class="content">
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/03.jpg');";></div>
+			</arction>
+		</section>
+		<section data-page="4" class="m-page m-page4 hide" name="引导四">
+			<arction class="content">
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/04.jpg');";></div>
+			</arction>
+		</section>
+	<!-- 开始引导页面结束 -->
+		<section data-page="5" class="m-page m-page5 hide" data-name="桂纶镁">
+			<arction class="content">
+				<div class="video">
+					<a href="javascript:;" id="video">
+						<div class="vbtn"><div class="vbg"></div></div>
+					</a>
+				</div>
+				<video class="f-hide" id='video_1' style="z-index:9999;position:absolute;top:38%;height:39%" autoplay="autoplay" controls="controls" preload="none" width="100%" height="" src="http://112.64.126.126:49521/LRLZServer/Images/movie/lrlz-4.mp4"></video>
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/05.jpg');";></div>
+			</arction>
+		</section>
+		<section data-page="6" class="m-page m-page6 hide" data-name="阿萨">
+			<arction class="content">
+				<a class="a6" href="http://m.baidu.com" ></a>
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/06.jpg');background-size:100% 100%";></div>
+			</arction>
+		</section>
+		<section data-page="7" class="m-page m-page7 hide"   data-name="容祖儿">
+			<arction class="content">
+				<a class="a6" href="http://m.baidu.com" ></a>
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/07.jpg');";></div>
+			</arction>
+		</section>
+		<section data-page="8" class="m-page m-page8 hide" data-name="赵薇">
+			<arction class="content">
+				<a class="a6" href="http://m.baidu.com" ></a>
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/08.jpg');";></div>
+			</arction>
+		</section>
+		<section data-page="9" class="m-page m-page9 hide" name="分享页面">
+			<arction class="content">
+				<div class="arrow"><p class="afor-1"></p></div>
+				<div class="m-img m-img01" style="background-image:url('images/end.jpg');";></div>
+		</section>
+	<!-- 最后结束页面 -->
+	</section>
+</body>
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/throttle.js"></script>
+<script type="text/javascript" src="js/vm3.js"></script>
+<script type="text/javascript" src="js/shade.js"></script>
+<script type="text/javascript" src="js/music.js"></script>
+<script>
+
+	//测试用
+	// $(function(){
+	// 	i=13;//i是当前第几张图0为默认
+	// 	music_pause=1;//1音乐默认关闭,2打开
+	// 	if(music_pause==1){
+	// 		document.getElementById("player").pause();
+	// 	}
+	// 	$('.m-page'+i).addClass('show').removeClass('hide');
+	// });
+	//视频
+	$("#video").on('click',function(){
+		var Media = document.getElementById("player");
+		Media.pause();
+		// var Media = document.getElementById("player");
+		// Media.pause();
+		$("#video_1").show();
+		//$("#movie").show();
+		//$("#move_close").show();
+	})
+	// $('#move_close').on('click',function(){
+	// 	var Media = document.getElementById("player");
+	// 	Media.play();
+	// 	alert(1)
+	// 	$("#movie").hide();
+	// 	$("#move_close").hide();
+	// })
+
+	//声音控制
+	$(".musicIcon").on('click',function(){
+		var Media = document.getElementById("player")
+		if($('.player').attr('sta')=='play'){
+			$('.player').attr('sta','pause');
+			Media.pause();
+			$(this).removeClass('musicStart');
+			$('.note').show().html('关闭')
+			setTimeout(function(){
+				$('.note').hide()
+			},2000);
+		}
+		else{
+			$('.player').attr('sta','play');
+			$(this).addClass('musicStart');
+			Media.play();
+			$('.note').show().html('打开')
+			setTimeout(function(){
+				$('.note').hide()
+			},2000);
+		}
+	});
+	//分享指南
+	$('#share_weixin').on('click',function(){
+		$('#share_mask').show()
+	})
+	$('#share_close').on('click',function(){
+		$('#share_mask').hide()
+	})
+
+	window.onload = function(){
+		$('#loading').animate({'opacity':0},500,function(){
+			$(this).css('display','none');
+		});
+	}
+</script>
+	<style>
+	#main{
+
+	}
+
+	#page1{
+	    width:100%;
+	    height: 100%;
+	    position: absolute;
+	    top:0;
+	    left:0;z-index: 99;
+	    background: url('images/start.jpg') no-repeat;
+	    background-size: 100% 100%;
+	}
+
+	#canvas{
+	    background:transparent;
+	    background-size: 100% 100%;
+}
+</style>
+</html>
