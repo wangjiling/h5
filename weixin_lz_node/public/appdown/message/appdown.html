@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-transform " />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>下载APP</title> 
+	<style>
+		*{margin: 0;padding: 0;}
+		#section{background: url(images/bg.jpg) no-repeat left top #f46665; background-size: cover; width: 100%; height: 100%; position: absolute; background-position: 0 -65px;}
+		.btn{
+			width: 140px;height: 42px; display: block; position: absolute; right: 30px; 
+			bottom: 30px;
+			border-radius: 5px;
+		}
+		.ap{
+			background: url(images/ap.png) no-repeat left top;
+			background-size: cover;
+			width: 204px; height: 285px;
+			position: absolute; right: 0; 
+			top: 30%;
+		}
+		#dialog{ position: absolute; left: 0;top: 0; width: 100%; z-index: 999; text-align: right; display: none;}
+		#dialog img{width: 60%;}
+		#dialog .ball{width: 18px;height: 18px;background-size: cover; background: #fff; right: 7px; bottom: 20px; position: absolute; border-radius: 50%;
+			-webkit-animation: zoom1 1.5s linear infinite both;	
+		}
+		.ball:after{
+			content: "";
+			 border-radius: 50%;
+			width: 22px;height: 22px;
+			position: absolute;
+			background: #fff;
+			left: -2px;
+			top: -2px;
+			-webkit-animation: zoom2 1.5s linear infinite both;
+			z-index: 0;
+		}
+		.ball:before{
+			content: "";
+			 border-radius: 50%;
+			width: 26px;height: 26px;
+			position: absolute;
+			background: rgba(255,255,255,.5);
+			left: -4px;
+			top: -4px;
+			z-index: 0;
+			-webkit-animation: zoom2 2s linear infinite both;
+		}
+
+		.pic{
+			background: url(images/btn.png) no-repeat center; background-size: cover;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: block;
+			z-index: 999;	
+			-webkit-animation: zoom1 1.5s linear infinite both;	
+		}
+		.btn:after{
+			content: "";
+			width: 140px;height: 42px;
+			position: absolute;
+			border-radius: 5px;
+			background: #fff;
+			left: 0;
+			top: 0;
+			-webkit-animation: zoom2 1.5s linear infinite both;
+			z-index: 0;
+		}
+		.btn:before{
+			content: "";
+			width: 140px;height: 42px;
+			position: absolute;
+			border-radius: 5px;
+			background: #fff;
+			left: 0;
+			top: 0;
+			z-index: 0;
+			-webkit-animation: zoom2 2s linear infinite both;
+		}
+		@-webkit-keyframes zoom1{
+			0%{-webkit-transform:scale(1,1);}
+			50%{-webkit-transform:scale(1.05,1.05); }
+			100%{-webkit-transform:scale(1,1);}
+		}		
+		@-webkit-keyframes zoom2{
+			0%{-webkit-transform:scale(1,1); opacity: 1;}
+			50%{-webkit-transform:scale(1,1); opacity: .3;}
+			100%{-webkit-transform:scale(1.2,1.2); opacity: 0;}
+		}
+	</style>  
+	<script>
+var browser={
+
+versions:function(){
+var u = navigator.userAgent, app = navigator.appVersion;
+
+return {
+trident: u.indexOf('Trident') > -1, //IE内核
+presto: u.indexOf('Presto') > -1, //opera内核
+webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端
+ios: !!u.match(/(i[^;]+\;(U;)? CPU.+Mac OS X)/), //ios终端
+android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+iPad: u.indexOf('iPad') > -1, //是否iPad
+webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+};
+}(),
+language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+// document.writeln("<BR/>语言版本: "+browser.language);
+
+// document.writeln(" <BR/>是否为移动终端: " + browser.versions.mobile);
+
+// document.writeln(" <BR/>ios终端: " + browser.versions.ios);
+
+// document.writeln(" <BR/>android终端: " + browser.versions.android);
+
+// document.writeln(" <BR/>是否为iPhone: " + browser.versions.iPhone);
+
+// document.writeln(" <BR/>是否iPad: " + browser.versions.iPad);
+
+// document.writeln(navigator.userAgent);
+window.onload = function(){
+    var p = document.getElementById('dialog');
+    var box = document.getElementById('showbox');	
+	if(browser.versions.ios || browser.versions.iPhone){
+//		document.getElementById('btn').href = 'itms-services://?action=download-manifest&url=https://app.yinxiang.com/shard/s4/sh/0c544d84-4e4f-4e9e-b47c-c6a5094921a8/31b561e9e17bfbe8985aa522a7d1fa0d/res/5c6ae6f8-5878-41bd-95ed-8043a892f3ad/LRLZ.plist';
+        document.getElementById('btn').href = 'https://itunes.apple.com/cn/app/mei-zhuang-you-xuan/id918011318?mt=8&uo=4';
+	}else if(browser.versions.android){	
+		if(isWeiXin()){
+//            document.getElementById('btn').href = 'http://ti50.3g.qq.com/open/s?aid=jumpurl&url=http://url.cn/WrHVVH';
+            document.getElementById('btn').href = 'http://mp.weixin.qq.com/mp/redirect?url=http://app.meizhuangyouxuan.com/app/android/mzyx_wechat.apk&t' + new Date().getTime() + '#wechat_redirect';
+        }else{
+            document.getElementById('btn').href = 'http://app.meizhuangyouxuan.com/app/android/mzyx_sms.apk';
+        }
+	}
+	document.getElementById('btn').onclick = function(){
+		if(isWeiXin()){
+			setTimeout(function(){
+                p.style.display = "block";
+                box.style.display = 'none';
+            }, 1000);
+	    }	    
+	}
+};
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
+	</script>	        	
+</head>
+<body>
+	<p id='dialog'><img src="images/dialog.png" alt=""><!-- <span class="ball"></span> --></p>
+	<section class="section" id="section">
+		<div class="ap" id="showbox">
+		<a id='btn' class="btn" href="#" target="_:)">
+			<span class="pic"></span>
+		</a>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+    window.shareData = {
+        "imgUrl": "http://app.meizhuangyouxuan.com/weixin/images/min.jpg",
+        "timeLineLink": "http://app.meizhuangyouxuan.com/weixin/appdown.html",
+        "tTitle":"上美妆优选购正品，让你的美丽不打折！" ,
+        "tContent": "上美妆优选购正品，让你的美丽不打折！"
+    };
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+               "desc": window.shareData.tContent,
+               "title": window.shareData.tTitle
+            }, function(res) {
+                // document.location.href ="";
+            })
+        });
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+               "desc": window.shareData.tContent,
+               "title": window.shareData.tTitle
+            }, function(res) {
+                // document.location.href ="";
+            });
+        });
+    }, false);
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F209bb079145f62fd9afc1c8d78d06b36' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

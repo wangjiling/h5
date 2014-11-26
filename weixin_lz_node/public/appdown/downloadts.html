@@ -1,0 +1,28 @@
+<head>
+    <script type="text/javascript">
+        function jump(target) {
+            var wx = 'http://mp.weixin.qq.com/mp/redirect?url=' + target + '&t' + new Date().getTime() + '#wechat_redirect';
+            if (!!target) {
+                var agent = navigator.userAgent.toLowerCase();
+                if (/micromessenger/.test(agent)) {
+                    window.location.assign(wx);
+                } else {
+                    window.location.assign(target);
+                }
+            }
+        }
+
+        var agent = navigator.userAgent.toLowerCase();
+        if (/android/.test(agent)) {
+            jump('http://pstatic.lrlz.com/panda.apk');
+        } else if (/iphone|ipad|ipod/.test(agent)) {
+            alert('ios已经在路上,尽情期待');
+        } else {
+            // 随便做点什么
+        }
+    </script>
+</head>
+<body>
+
+
+</body>

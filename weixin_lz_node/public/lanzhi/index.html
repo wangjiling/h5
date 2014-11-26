@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-transform " />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>兰芝官方旗舰店</title>	
+</head>
+<body>
+	<img src="http://app.meizhuangyouxuan.com/lanzhi/images/min.jpg" style='display:none' alt="">
+	
+	<section class="p1">
+		<div class="logo"></div>
+		<div class="title"></div>
+		<a href="javascript:;" class="btn"></a>
+	</section>
+	<section class="p2">
+		<div class="header clear">
+			<div class="pic"></div>
+			<div class="txt"></div>
+			<p id='timer'>已用时间：<span>0</span></p>
+		</div>
+		<ul id="list" class='clear'></ul>
+		<div class="mask"><a href="javascript:;" id='begin' class="btn"></a></div>
+		<div class="hint"></div>
+	</section>	
+	<section class="p3">
+		<div class="bg"></div>
+		<div class="mask">
+			<a href="javascript:;" class="btn"></a>
+		</div>
+	</section>	
+	<section class="p4">
+		<div class="prize1 add"><a class='down' target='_newpage' href="#"></a></div>
+		<div class="prize2 add"><a class='down' target='_newpage' href="#"></a></div>
+		<div class="prize3 tianmao">
+			<a class="lq" href='http://shop.m.taobao.com/shop/coupon.htm?&activityId=177000486&sellerId=1023696028' target='_newpage'></a>
+			<a class='down' target='_newpage' href="#"></a>
+		</div>		
+	</section>
+	<section class="p5">		
+		<form action="">
+			<div class="control-group"><label for="">收货人</label><input placeholder='填写姓名' type="text"></div>
+			<div class="control-group"><label for="">手机号</label><input id='phone' pattern="[0-9]{11}" placeholder='填写11位手机号码' type="number"><span class='hint'></span></div>
+			<div class="control-group"><label for="">收货地址</label><input placeholder='省市街道门牌信息' type="text"></div>
+			<div class="control hint">
+				<p>我们将在2周内安排发货</p>
+				<p>请耐心等待哟！</p>
+			</div>
+			<div class="control"><a class='btn' href="javascript:;">点击提交</a></div>
+		</form>
+	</section>
+	<p id='dialog'><img src="images/dialog.png" alt=""></p>
+	<div id="loading_layer"><span class="loading_box"></span></div>
+	<script src='js/new_wxshare.js'></script>
+	<script src='js/zepto.js'></script>
+	<script src='js/main.js'></script>
+	<script>
+		var browser={
+
+			versions:function(){
+			var u = navigator.userAgent, app = navigator.appVersion;
+
+			return {
+			trident: u.indexOf('Trident') > -1, //IE内核
+			presto: u.indexOf('Presto') > -1, //opera内核
+			webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端
+			ios: !!u.match(/(i[^;]+\;(U;)? CPU.+Mac OS X)/), //ios终端
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+			iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+			iPad: u.indexOf('iPad') > -1, //是否iPad
+			webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+			};
+			}(),
+			language:(navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+
+
+			function isWeiXin(){
+			    var ua = window.navigator.userAgent.toLowerCase();
+			    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+			        return true;
+			    }else{
+			        return false;
+			    }
+			}
+
+		//加载完执行
+		window.onload = function(){
+			setTimeout(function(){
+				// $('#section li:first-child').removeClass('hide').addClass('show'),5000;
+				$('#loading_layer').hide();
+				//第一页
+				$('.p1').show();
+			},false);
+	        $('#dialog').tap(function(){
+        		$(this).hide();
+	        });			
+			$('.down').tap(function(i,v){
+				if(isWeiXin() && browser.versions.android){
+					$('#dialog').show();
+			    }	
+    		});	        
+
+			if(browser.versions.ios || browser.versions.iPhone){
+				$('.down').each(function(i,v){
+					v.href = 'http://app.meizhuangyouxuan.com/weixin/appdown.html'
+				})
+			}else if(browser.versions.android){
+			    $('.down').each(function(i,v){
+					v.href = 'http://app.meizhuangyouxuan.com/weixin/appdown.html'
+				})
+			}
+		}					
+	</script>
+</body>
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F209bb079145f62fd9afc1c8d78d06b36' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>
