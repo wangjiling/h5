@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="max-age=1" http-equiv="Cache-Control">
+    <title>瑞虹新城-璟庭 优享生活 分享精彩</title>
+
+    <link rel="stylesheet" type="text/css" href="css/zepto.alert.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    <style type="text/css">
+        .notEnough{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            width: 70%;
+            margin-left: -35%;
+            background: #fff;
+            z-index: 200;
+        }
+
+        .notEnough img{
+            width: 100%;
+        }
+
+        img.confirmBtn1{
+            width: 30%;
+            position: absolute;
+            margin-left: -15%;
+            top: 75%;
+            left: 50%;
+        }
+
+    </style>
+</head>
+
+<body style="margin:0;background-color:#6ecbb9;text-align:center;" >
+<div id="page" class="page">
+    <div id="mask" class="mask displayNone"></div>
+
+    <img class="bgImg" src="images/11bg.jpg" border="0" usemap="#map1"/>
+    <map name="map1">
+        <area title="继续收集元素" href="javascript:window.location.href='2.html'" coords="133,770,516,844" shape="rect">
+        <area title="立即兑换" onclick='exchange();' coords="134,884,516,958" shape="rect">
+    </map>
+
+    <div id="notEnough" class="notEnough displayNone">
+        <img src="images/12btn1.png" border="0"/>
+        <img class="confirmBtn1" src="images/confirmBtn.png" border="0" onclick="confirmBtn()"/>
+    </div>
+    <div id="contact" class="contact displayNone">
+        <div class="contactTop">
+            <span>请填写您的联系方式，以便我们通知您尽快领奖。</span>
+        </div>
+        <div class="contactInfo">
+            <li><span>微信名</span><input type="text"/></li>
+            <li><span>姓名</span><input type="text"/></li>
+            <li><span>手机</span><input type="text"/></li>
+        </div>
+        <img class="confirmBtn" src="images/confirmBtn.png" border="0"
+             onclick="javascript:document.getElementById('mask').style.display='none';document.getElementById('contact').style.display='none';window.location.href='index.html';"/>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    //mockup data
+    function exchange(){
+        var elementCount = 4;
+        document.getElementById('mask').style.display = 'block';
+        if(elementCount > 3){
+            document.getElementById('contact').style.display='block';
+        }else{
+            document.getElementById('notEnough').style.display='block';
+        }
+    }
+
+    function confirmBtn(){
+        document.getElementById('mask').style.display = 'none';
+        document.getElementById('notEnough').style.display='none';
+    }
+</script>
+
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/zepto.alert.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</html>

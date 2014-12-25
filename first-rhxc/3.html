@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="max-age=1" http-equiv="Cache-Control">
+    <title>瑞虹新城-璟庭 优享生活 分享精彩</title>
+
+    <link rel="stylesheet" type="text/css" href="css/zepto.alert.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    <style type="text/css">
+        .btn1{
+            position: absolute;
+            top: 78%;
+            left: 50%;
+            width: 64%;
+            margin-left: -32%;
+        }
+
+        .friendCount{
+            position: absolute;
+            top: 42%;
+            color: #996c33;
+            font-family: arial;
+            font-size: 100px;
+            font-weight: bold;
+            height: 10%;
+            line-height: 100%;
+            width: 100%;
+            text-align:center;
+        }
+
+        @media screen and (max-width: 480px){
+            .friendCount{
+                font-size:50px;
+            }
+        }
+
+        .notEnough, .enough{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            width: 70%;
+            margin-left: -35%;
+            background: #fff;
+            z-index: 200;
+        }
+
+        .notEnough img, .enough img{
+            width: 100%;
+        }
+
+        img.confirmBtn1, img.confirmBtn2{;
+            width: 30%;
+            position: absolute;
+            margin-left: -15%;
+            top: 75%;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body style="margin:0;background-color:#6ecbb9;" >
+    <div id="page" class="page">
+        <div id="mask" class="mask displayNone"></div>
+        <div id="inviteFriend" class="inviteFriend displayNone"></div>
+
+		<img class="bgImg" src="images/3bg.jpg" border="0"/>
+        <div id="friendCount" class="friendCount">0</div>
+        <img class="btn1" src="images/3btn1.png" onclick='exchange();'>
+
+        <div id="notEnough" class="notEnough displayNone">
+            <img src="images/4btn1.png" border="0"/>
+            <img class="confirmBtn1" src="images/confirmBtn.png" border="0" onclick="confirmBtn()"/>
+        </div>
+        <div id="enough" class="enough displayNone">
+            <img src="images/5btn2.png" border="0"/>
+            <img class="confirmBtn2" src="images/5btn1.png" border="0" onclick="exchange2()"/>
+        </div>
+        <div id="contact" class="contact displayNone">
+            <div class="contactTop">
+                <span>请填写您的联系方式，以便我们通知您尽快领奖。</span>
+            </div>
+            <div class="contactInfo">
+                <li><span>微信名</span><input type="text"/></li>
+                <li><span>姓名</span><input type="text"/></li>
+                <li><span>手机</span><input type="text"/></li>
+            </div>
+            <img class="confirmBtn" src="images/confirmBtn.png" border="0"
+                 onclick="javascript:document.getElementById('mask').style.display='none';document.getElementById('contact').style.display='none';window.location.href='index.html';"/>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function exchange(){
+        document.getElementById('mask').style.display = 'block';
+        var friendCount = document.getElementById('friendCount').innerHTML;
+        friendCount = parseInt(friendCount);
+        if(friendCount > 50){
+            document.getElementById('enough').style.display='block';
+        }else{
+            document.getElementById('notEnough').style.display='block';
+        }
+    }
+
+    function exchange2(){
+        document.getElementById('enough').style.display = 'none';
+        document.getElementById('contact').style.display='block';
+    }
+
+    function confirmBtn(){
+        document.getElementById('mask').style.display = 'none';
+        document.getElementById('notEnough').style.display='none';
+        inviteFriend();
+    }
+
+    function inviteFriend(){
+        document.getElementById('mask').style.display = 'block';
+        document.getElementById('inviteFriend').style.display = 'block';
+        document.getElementById('inviteFriend').onclick = function(){
+            document.getElementById('mask').style.display = 'none';
+            document.getElementById('inviteFriend').style.display = 'none';
+            document.getElementById('inviteFriend').onclick = function(){return false;};
+        }
+    }
+</script>
+
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/zepto.alert.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</html>

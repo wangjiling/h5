@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="max-age=1" http-equiv="Cache-Control">
+    <title>瑞虹新城-璟庭 优享生活 分享精彩</title>
+
+    <link rel="stylesheet" type="text/css" href="css/zepto.alert.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    <style type="text/css">
+        .winningInfo{
+            height: 42%;
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            background-color: #6ecbb9;
+            color: #fff;
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 480px){
+            .winningInfo{
+                font-size:16px;
+            }
+        }
+
+        .item{
+            height: 7%;
+            margin-bottom: 1%;
+        }
+
+        #phone{
+            margin-right: 4%;
+        }
+
+        .gift{
+            color: #d0a972;
+        }
+
+        .displayNone{
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="margin:0px;background-color:#6ecbb9;text-align:center;" >
+    <div id="page" class="page">
+        <img class="bgImg" src="images/14bg.jpg"/>
+        <div class="winningInfo" id="winningInfo">
+            <div id="template" class="item displayNone">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    // mockup data
+    var winningList = [
+        {
+            'phone':15216888888,
+            'gift':'充电宝'
+        },
+        {
+            'phone':15216866666,
+            'gift':'电影票'
+        },
+        {
+            'phone':13434567888,
+            'gift':'料理机'
+        },
+        {
+            'phone':15216888888,
+            'gift':'充电宝'
+        },
+        {
+            'phone':15216866666,
+            'gift':'电影票'
+        },
+        {
+            'phone':13434567888,
+            'gift':'料理机'
+        },
+        {
+            'phone':15216888888,
+            'gift':'充电宝'
+        },
+        {
+            'phone':15216866666,
+            'gift':'电影票'
+        },
+        {
+            'phone':13434567888,
+            'gift':'充电宝'
+        },
+        {
+            'phone':15216888888,
+            'gift':'充电宝'
+        },
+        {
+            'phone':15216866666,
+            'gift':'电影票'
+        },
+        {
+            'phone':13434567888,
+            'gift':'电影票'
+        }
+    ];
+
+    function showWinner(winningList){
+        var winningInfo = document.getElementById('winningInfo');
+        for(var i=0; winningList.length > i;i++){
+            var template = document.getElementById('template').cloneNode(true);
+            template.style.display='block';
+            template.id="item"+i;
+            template.innerHTML='<span id="phone">' + winningList[i].phone + '</span><span>获得<span class="gift" id="gift">' + winningList[i].gift + '</span>一份</span>';
+            winningInfo.appendChild(template);
+        }
+    }
+
+    showWinner(winningList);
+</script>
+
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/zepto.alert.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</html>
