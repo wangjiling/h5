@@ -47,7 +47,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 			else
 				var Node = document.documentElement;
 			 return Math.max(Node.scrollHeight,Node.clientHeight);
-		}
+		};
 		var page_h = fn_h();
 		var m_h = $(".m-page").height();
 		page_h >= m_h ? v_h = page_h : v_h = m_h ;
@@ -56,7 +56,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 		$(".m-page").height(v_h); 	
 		$(".m-index").height(v_h);
 		
-	};
+	}
 	init_pageH();
 
 
@@ -70,7 +70,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 		$(".m-page").on('mousedown touchstart',page_touchstart);
 		$(".m-page").on('mousemove touchmove',page_touchmove);
 		$(".m-page").on('mouseup touchend mouseout',page_touchend);
-	};
+	}
 	
 
 	
@@ -86,14 +86,14 @@ var Msize = $(".m-page").size(), 	//页面的数目
 			mousedown = true;
 		}
 		firstP = initP;	
-	};
+	}
 	
 	//插件获取触摸的值
 	function V_start(val){
 		initP = val;
 		mousedown = true;
 		firstP = initP;		
-	};
+	}
 	
 	//触摸移动（鼠标移动）开始函数
 	function page_touchmove(e){
@@ -197,7 +197,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 				moveP = null;	
 			}
 		}
-	};
+	}
 
 	//触摸结束（鼠标起来或者离开元素）开始函数
 	function page_touchend(e){	
@@ -219,7 +219,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 				if(position)
 					var taX="96px";
 				else
-					taX="-96px"
+					taX="-96px";
 				
 				//上一页的消失状态
 				$(".m-page").eq(page_n-1).animate({'top':0,scale: 0.8,translate:'0,'+taX},500,'ease')
@@ -232,7 +232,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 					
 					//切换成功回调的函数
 					success();
-				})
+				});
 			
 				
 				
@@ -257,7 +257,7 @@ var Msize = $(".m-page").size(), 	//页面的数目
 		moveP		= null,			//每次获取到的值
 		firstP		= null,			//第一次获取的值
 		mousedown	= null;			//取消鼠标按下的控制值
-	};
+	}
 /*
 ** 切换成功的函数
 */

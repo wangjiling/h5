@@ -70,15 +70,13 @@
 		isDown = false;
 		var percent = getTransparentPercent();
 		console.log(percent);
-		if(percent > 30){
-			//刮到百分比
-			
-			canvas.animate({opacity: 0.25}, 500,'ease-out')
-			$("#page1").animate({opacity: 0}, 1000,'ease-out')
+		if(percent > 30){//刮到百分比
+			canvas.animate({opacity: 0.25}, 500,'ease-out');
+			$("#page1").animate({opacity: 0}, 1000,'ease-out');
 			setTimeout(function(){
-					$("#page1").remove();
-				},1000);
-			var Media = document.getElementById("player")
+                $("#page1").remove();
+            },1000);
+			var Media = document.getElementById("player");
 			Media.play();
 		}
 	}
