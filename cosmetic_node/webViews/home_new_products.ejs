@@ -1,0 +1,36 @@
+<%- partial('common/header',{title:title,cssSrc:["common"]}) %>
+<%- partial('common/layout_header',{}) %>
+<%- partial('common/menu',{}) %>
+<!-- 页面内容 -->
+<div class="container tab_container">
+	<section id="hot_sales"></section>
+	<section id="integral_exchange"></section>
+	<section id="new_list">
+		<ul class="layout_dblist">
+		<% newListData.products.forEach(function(v){ %>
+			<li>
+				<% if("当前版本后台无返回favor字段"){ %>
+				<i class="addFavor" data-flag="addFavor" data-uuid=<%=v.uuid%>></i>
+				<% }else{ %>
+				<i class="addFavor" data-flag="rmFavor"></i>
+				<% } %>
+				<a class="pic" href="/product/detail/<%= v.uuid%>"><img src=<%= v.pic_url %> alt=""></a>
+				<p class="title" data-value="<%= v.title %>"></p>
+				<p class="memo decorate_line" data-value="<%= v.memo %>"></p>
+				<div class="price">
+					<div class="discount">优选价:<%= v.cur_price%></div>
+					<div class="original"><%= v.og_price%></div>
+				</div>
+				<div class="info">
+					<div class="sales">已售<%= v.sales %>件</div>
+					<div class="cart"><a href="javascript:;"></a></div>
+				</div>
+			</li>	    
+		<% }) %>
+		</ul>
+	</section>
+	<section id="brand_list"></section>
+</div>
+
+<%- partial('common/layout_footer',{}) %>
+<%- partial('common/footer',{jsSrc:["fixData","home"]}) %>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="target-densitydpi=high-dpi,width=device-width, user-scalable=no, initial-scale=0.66667, minimum-scale=0.6, maximum-scale=0.7" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+    <% for(var i=0; i<cssSrc.length; i++) {%>
+        <link rel="stylesheet" href=/css/<%= cssSrc[i] %>.css>
+    <% } %>
+</head>
+<body>

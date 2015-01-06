@@ -1,0 +1,115 @@
+<%- partial('common/header',{title:title,cssSrc:['product_detail']}) %>
+<div class="container">
+    <input id="uuid" name="uuid" type="hidden" value="<%= uuid %>"/>
+    <div id="mask" class="mask displayNone"></div>
+    <div id="chooseCategory" class="chooseCategory displayNone">
+        <div class="categoryInfo">
+            <img class="categoryImg" />
+            <div class="infoRight">
+                <p class="price">¥<span id="priceRange"></span></p>
+                <p>(库存<span id="sku_stock"></span>件)</p>
+            </div>
+        </div>
+        <div class="category">
+            <p>商品分类</p>
+            <div id="categoryList" class="categoryList"></div>
+        </div>
+        <div class="goodsCount">
+            <span class="chooseLab">购买数量</span>
+            <div class="addSubtract">
+                <div id="minus" class="minus"></div>
+                <span id="chooseCount" class="chooseCount">1</span>
+                <div id="plus" class="plus"></div>
+            </div>
+        </div>
+        <div id="closeBtn" class="closeBtn"></div>
+    </div>
+    <div class="content">
+        <div id="imgWindow" class="imgWindow">
+            <div id="focus" class="focus index-banner"><!-- 轮播图展示 -->
+                <div class="bd">
+                    <ul>
+                        <!--<li><a href=""><img _src="images/1.jpg" src="images/1.jpg" /></a></li>-->
+                    </ul>
+                </div>
+
+                <div class="hd">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="goodsInfo">
+            <div class="introduceArea">
+                <p id="introduce" class="introduce"></p>
+                <!--<img class="dashImg" src="images/product_detail_dashed.png"/>-->
+            </div>
+            <div class="integralBuy">
+                <div class="buyPrice">
+                    <span class="discountPrice">折后价¥ <span id="discountPrice" ></span></span>
+                    <!--<span id="originalPriceArea" class="originalPrice displayNone">原价¥ <span id="originalPrice"></span></span>-->
+                    <span class="integral">+ <span id="integral"></span>积分</span>
+                </div>
+                <div class="buyInfo">
+                    <!--<span class="courierFee">快递费<span id="courierFee"></span>元</span>-->
+                    <span class="monthSale">月销<span id="monthSale"></span>件</span>
+                    <span class="commitment"></span>
+                </div>
+            </div>
+        </div>
+        <div id="chooseCategoryArea" class="chooseCategoryArea">
+            <span class="categoryLabel">选择分类</span>
+            <span id="categoryBtn" class="categoryBtn"></span>
+        </div>
+        <div class="buyBtn">
+            <div class="left">
+                <span id="add_favor" class="add_favor"></span>
+                <span id="go_cart" class="go_cart"><span id="sku_total_count" class="sku_total_count">0</span></span>
+            </div>
+            <span id="add_cart" class="add_cart">加入购物车</span>
+            <!--<span id="download" class="productDownload"></span>-->
+        </div>
+        <div class="evaluationArea">
+            <div class="evaluationLabel">
+                <span class="evaluationIcon"></span>
+                <span>评价信息</span>
+            </div>
+            <div class="evaluationContent">
+                <div id="evaluation" class="focus index-banner"><!-- 轮播图展示 -->
+                    <div class="bd">
+                        <ul>
+                            <!--<li>-->
+                            <!--<div class="userInfo">-->
+                            <!--<span class="userName">w**g</span>-->
+                            <!--<span class="time">2014-9-25 14:32</span>-->
+                            <!--</div>-->
+                            <!--<div class="comment">一如既往的好。。。</div>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+
+                    <div class="hd">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detailArea">
+            <div class="detailLabel">
+                <!--<span class="detailIcon"></span>-->
+                <!--<span>商品详情</span>-->
+                <span id="detail_tab" class="detail_tab on">商品详情</span>
+                <span id="params_tab" class="params_tab">规格参数</span>
+            </div>
+            <iframe frameborder=no id="detailContent" class="detailContent"></iframe>
+            <div id="params_content" class="params_content displayNone">
+                <div class="params_title">
+                    <span class="left"></span>
+                    <span class="title">商品参数</span>
+                    <span class="right"></span>
+                </div>
+                <table id="params_table" class="params_table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<%- partial('common/footer',{jsSrc:['product_detail']}) %>

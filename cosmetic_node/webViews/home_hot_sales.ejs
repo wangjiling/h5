@@ -1,0 +1,38 @@
+<%- partial('common/header',{title:title,cssSrc:["common"]}) %>
+<%- partial('common/layout_header',{}) %>
+<%- partial('common/menu',{}) %>
+<!-- 页面内容 -->
+<div class="container tab_container">
+	<section id="hot_sales">
+		<div class="banner" id="banner">
+				<p class="title">热销TOP榜</p>
+				<ul class="banner_hd"></ul>
+				<ul class="banner_bd">
+					<% hotSalesData.products.forEach(function(v){ %>
+					<li><a href=/product/detail/<%= v.uuid%>><img _src="<%= v.ad_pic %>" src="/images/loading.gif" /></a></li>
+					<% }) %>				
+				</ul>			
+		</div>
+		<div class="sort">
+			<ul class="layout_hd tab_hd">
+				<li><img src="/images/caizhuang.png" alt=""></li>
+				<li><img src="/images/hufu.png" alt=""></li>
+				<li><img src="/images/jiemian.png" alt=""></li>
+				<li><img src="/images/meibai.png" alt=""></li>
+			</ul>
+			<div class="layout_bd tab_bd">
+				<ul class="layout_list caizhuang">
+
+		        </ul>
+		        <ul class="layout_list hufu"></ul>
+		        <ul class="layout_list jiemian"></ul>
+		        <ul class="layout_list meibai"></ul>
+	        </div>		
+		</div>
+	</section>
+	<section id="integral_exchange"><h1>积分兑换</h1></section>
+	<section id="new_list"><h1>新品</h1></section>
+	<section id="brand_list"><h1>品牌街</h1></section>
+</div>
+<%- partial('common/layout_footer',{}) %>
+<%- partial('common/footer',{jsSrc:["artTemplate","partial_template","fixData","home"]}) %>

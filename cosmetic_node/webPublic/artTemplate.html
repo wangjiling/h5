@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>artTemplate</title>
+	<script src="js/artTemplate.js"></script>
+</head>
+<body>
+	<div id="content"></div>
+	<script id="test" type="text/html">
+	<h1><%=title%></h1>
+	<ul>
+	    <%for(i = 0; i < list.length; i ++){%>
+	        <li>条目内容 <%=i + 1%> ：<%=list[i]%></li>
+	    <%}%>
+	</ul>	
+	<% list.forEach(function(v){ %>
+		<h1><%= v %></h1>
+	<% }) %>
+	</script>	
+	<script>
+		window.onload = function(){
+			var data = {
+			    title: '标签',
+			    list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+			};
+			var html = template('test', data);
+			document.getElementById('content').innerHTML = html;
+		}
+	</script>
+</body>
+</html>

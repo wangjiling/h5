@@ -1,0 +1,115 @@
+<%- partial('common/header',{title:title,cssSrc:['order_confirm']}) %>
+<div class="container">
+    <div id="addAddress" class="addAddress">
+        <span class="addBtn"></span>
+        <span>添加收货地址</span>
+    </div>
+    <div id="editAddress" class="editAddress displayNone">
+        <div class="name boxFlexWrapper">
+            <span>收货人</span>
+            <input type="text" id="buyerName" value="" placeholder="填写姓名"/>
+        </div>
+        <p id="nameErrMsg" class="errMsg displayNone">姓名不能为空</p>
+        <div class="phoneNumber boxFlexWrapper">
+            <span>手机号</span>
+            <input type="number" id="buyerPhone" value="" maxlength="11" placeholder="填写11位手机号码"/>
+        </div>
+        <p id="phoneErrMsg" class="errMsg displayNone">请填写正确的11位手机号码</p>
+        <div class="address boxFlexWrapper">
+            <span>详细地址</span>
+            <input type="text" id="buyerAddress" value="" placeholder="街道门牌信息"/>
+        </div>
+        <p id="addressErrMsg" class="errMsg displayNone">地址不能为空</p>
+        <div id="completeBtn" class="completeBtn">完成</div>
+    </div>
+    <div id="completeAddress" class="completeAddress displayNone">
+        <div class="name boxFlexWrapper">
+            <span>收货人</span>
+            <input type="text" id="completeName" readonly/>
+        </div>
+        <div class="phoneNumber boxFlexWrapper">
+            <span>手机号</span>
+            <input type="text" id="completePhone" readonly/>
+        </div>
+        <div class="address boxFlexWrapper">
+            <span>详细地址</span>
+            <input type="text" id="completeAddr" readonly/>
+        </div>
+        <div id="editBtn" class="editBtn">编辑</div>
+    </div>
+    <div class="goodsInfo">
+        <div class="topInfo">
+            <div class="left">
+                <span class="commitment_label">美妆优选承诺：</span>
+                <span class="commitment_postage">满百包邮</span>
+            </div>
+            <span class="commitment"></span>
+        </div>
+        <ul id="sku_list">
+            <!--<li class="skuInfo">-->
+                <!--<img class="goodsImg" src="/images/order_confirm.jpg"/>-->
+                <!--<div class="introduceItem">-->
+                    <!--<span class="introduce"></span>-->
+                    <!--<span class="category">100ml三件套</span>-->
+                <!--</div>-->
+                <!--<div class="priceItem">-->
+                    <!--<span class="price">¥260.00</span>-->
+                    <!--<div class="sku_count_sec"><span class="countBtn"></span><span class="sku_count">1</span></div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+        <div class="bottomInfo">
+            <div class="paymentItem">
+                <span>共<span id="total_sku_count" class="total_sku_count">1</span>件商品</span>
+                <span class="payment">总价：<span id="total_price" class="total_price">¥ 260.00</span></span>
+            </div>
+            <div class="courierItem">
+                <span>邮费：<span id="courier" class="courier">¥ 0</span></span>
+            </div>
+            <div class="integralItem">
+                <span>消费积分：<span id="integral" class="integral">20积分</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="payConfirm">
+        <div class="totalPrice">
+            <span class="payMoney">合计：¥<span id="total_money">260.00</span></span>
+            <span>消费积分：<span id="pay_integral" class="pay_integral">20</span>积分</span>
+        </div>
+        <span id="payBtn" class="payBtn"></span>
+    </div>
+</div>
+<script type="text/javascript">
+    var jsApiParameters = JSON.parse('<%- JSON.stringify(jsApiParameters) %>');
+    //    alert('jsApiParameters : ' + JSON.stringify(jsApiParameters));
+
+//    //调用微信JS api 支付
+//    function jsApiCall()
+//    {
+////        alert('jsApiCall');
+//        WeixinJSBridge.invoke(
+//                'getBrandWCPayRequest',
+//                jsApiParameters,
+//                function(res){
+//                    WeixinJSBridge.log(res.err_msg);
+//                    alert(res.err_msg);
+//                }
+//        );
+//    }
+//
+//    function callPay()
+//    {
+////        alert('callPay');
+//        if (typeof WeixinJSBridge == "undefined"){
+//            if( document.addEventListener ){
+//                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+//            }else if (document.attachEvent){
+//                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+//                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+//            }
+//        }else{
+//            jsApiCall();
+//        }
+//    }
+</script>
+<%- partial('common/footer',{jsSrc:['artTemplate', 'order_confirm']}) %>

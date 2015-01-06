@@ -1,0 +1,19 @@
+{
+    "globalAPIParams":{
+        "host_port": "http://121.40.192.232:8888",
+        "path": "/AppServer/app/inter",
+        "https_host_port": "https://121.40.192.232:8443",
+        "path_h5": "/AppServer/h5/inter",
+        "appKey": "6581235709",
+        "token":"tbgV91FCJ11J9193F7C20i77FPw6iTC86IMs3vEpn38Ks77fcY6007996q3kk90E",
+        "appVer":"1.0"
+    },
+
+    "wxParams":{
+        "appId":"wxf1c3100b0643ee97",
+        "appSecret":"1ac0514d5908b07f71ff69adbb358d20",
+        "mchid":"10028359",
+        "partnerKey":"8e87af913738926277d1a9b1e1e6b4f3",
+        "notify_url":"http://m.meizhuangyouxuan.com/weixin/notify"
+    }
+}

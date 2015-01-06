@@ -1,0 +1,258 @@
+body {
+    font-size: 1.4rem;
+    color: #828f95;
+    background-color: #e5e5e5;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 65px;
+    font-weight: bold;
+}
+
+.addAddress{
+    width: 100%;
+    height: 100px;
+    background-color: #556270;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.editAddress{
+    color: #fff;
+    background-color: #556270;
+    padding-bottom: 20px;
+}
+
+.editAddress .errMsg{
+    color: #f3416f;
+    font-size: 1rem;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.completeAddress{
+    position: relative;
+    color: #fff;
+    background-color: #556270;
+    padding-bottom: 10px;
+}
+
+input{
+    display: block;
+    -webkit-box-flex: 1;
+    color: #d5d5d5;
+    font-weight: bold;
+    height: 30px;
+    background-color: #556270;
+    border: 0 none;
+}
+
+input:focus{
+    outline: 0 none;
+}
+
+.editAddress .boxFlexWrapper{
+    padding-top: 20px;
+}
+
+.completeAddress .boxFlexWrapper{
+    padding-top: 10px;
+}
+
+.editAddress span, .completeAddress span{
+    margin: 0 10px;
+    width: 100px;
+    border-right: 1px solid #d5d5d5;
+}
+
+.completeBtn{
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 50px auto 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+
+.editBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+}
+
+.addBtn{
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/order_confirm_plus.png');
+    background-size: cover;
+    margin: auto 5px;
+}
+
+.goodsInfo{
+    /*margin-top: 5px;*/
+    background-color: #fff;
+}
+
+.topInfo{
+    height: 40px;
+    margin: 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.commitment_postage{
+    color: #ff9732;
+}
+
+span.commitment{
+    display: block;
+    width: 70px;
+    height: 16px;
+    background: url('../images/product_commitment.png') no-repeat 0 0;
+    background-size: cover;
+}
+
+.skuInfo{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: start;
+}
+
+.skuInfo span{
+    display: block;
+}
+
+.goodsImg{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+.introduceItem{
+    margin-top: 10px;
+    height: 80px;
+    -webkit-box-flex: 1;
+ }
+
+.introduce{
+   height: 60px;
+}
+
+.category{
+    height: 20px;
+    line-height: 20px;
+    color: #c3cbce;
+    font-size: 1.2rem;
+ }
+
+.priceItem{
+    margin: 10px;
+}
+
+.originalPrice{
+    color: #c3cbce;
+    text-decoration: line-through;
+}
+
+.courierItem, .integralItem, .paymentItem{
+    height: 40px;
+    margin: 0 10px;
+    line-height: 40px;
+    text-align: right;
+    -webkit-box-pack: justify;
+    border-top: 1px solid #d5d5d5;
+    color: #c3cbce;
+}
+.priceItem .countBtn{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-image: url('../images/order_confirm_cheng.png');
+    background-size: cover;
+}
+
+.priceItem .sku_count{
+    display: inline-block;
+    color: #c3cbce;
+}
+
+.priceItem .sku_count_sec{
+    margin-top: 3px;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.paymentItem .total_sku_count{
+    margin: 0 2px;
+    color: #828f95;
+}
+
+.paymentItem .payment{
+    margin-left: 5px;
+}
+
+.paymentItem .total_price, .courierItem .courier, .integralItem .integral{
+    display: inline-block;
+    width: 60px;
+    color: #828f95;
+    text-align: left;
+}
+
+.boxFlexWrapper{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+}
+
+.boxFlexWrapper span{
+    display: block;
+}
+
+.payConfirm{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    background-color: #f8f8f8;
+    height: 60px;
+}
+
+.totalPrice {
+    margin-left: 20px;
+    color: #c3cbce;
+}
+
+.payMoney{
+    display: block;
+    color: #f3416f;
+    margin-bottom: 10px;
+}
+
+.payBtn{
+    display: block;
+    width: 131px;
+    height: 35px;
+    margin-right: 10px;
+    background: url('../images/wx_pay.png') no-repeat 0 0;
+    background-size: cover;
+}

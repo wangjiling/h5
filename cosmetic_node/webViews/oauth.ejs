@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <script type="text/javascript">
+        var redirect_uri = encodeURIComponent('http://m.meizhuangyouxuan.com/weixin/oauth/' + '<%= scope %>');
+//        alert('redirect_uri : ' + redirect_uri);
+        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf1c3100b0643ee97&redirect_uri=' + redirect_uri + '&response_type=code&scope=' + '<%= scope %>' + '&state=123#wechat_redirect';
+//        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf1c3100b0643ee97&redirect_uri=' + redirect_uri + '&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect';
+//        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf1c3100b0643ee97&redirect_uri=' + redirect_uri + '&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+    </script>
+</head>
+<body>
+</body>
+</html>

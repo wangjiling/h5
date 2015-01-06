@@ -1,0 +1,34 @@
+<%- partial('common/header',{title:title,cssSrc:["common"]}) %>
+<%- partial('common/layout_header',{}) %>
+<%- partial('common/menu',{}) %>
+<!-- 页面内容 -->
+<div class="container tab_container">
+	<section id="hot_sales"></section>
+	<section id="gift_exchange">
+		<ul class="layout_list">
+			<% giftListData.products.forEach(function(v){ %>
+			<li>
+				<div class="pic">
+					<img src=<%= v.pic_url %> alt="">
+				</div>
+				<div class="info">
+					<p class="title"><%= v.title %></p>
+					<div class="meta">
+						<p class="cur_price">兑换积分<%= v.cur_price %></p>
+						<p class="og_price">原价<%= v.og_price %></p>							
+					</div>
+					<div class="layout_bot">
+						<p class="sales"><%= v.sales %>人已兑换</p>
+						<div class="cart"><a href="/uuid"></a></div>
+					</div>
+				</div>
+			</li>
+			<% }) %>
+        </ul>		
+	</section>
+	<section id="new_list"></section>
+	<section id="brand_list"></section>
+</div>
+
+<%- partial('common/layout_footer',{}) %>
+<%- partial('common/footer',{jsSrc:["fixData","home"]}) %>

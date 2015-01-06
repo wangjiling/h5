@@ -1,0 +1,19 @@
+<%- partial('common/header',{title:title,cssSrc:["common"]}) %>
+<%- partial('common/layout_header',{}) %>
+<%- partial('common/menu',{}) %>
+<!-- 页面内容 -->
+<div class="container tab_container">
+	<section id="hot_sales"></section>
+	<section id=""></section>
+	<section id="new_list"></section>
+	<section id="brand_list">
+		<ul class="brand_street_list">
+		<% brandListData.data.forEach(function(v){ %>
+		    <li><a href=/brand/list?brand_uuid=<%= v.brand_uuid %>><img src=<%= v.banner_url_ios %>></a></li>
+		<% }) %>
+		</ul>
+	</section>
+</div>
+
+<%- partial('common/layout_footer',{}) %>
+<%- partial('common/footer',{jsSrc:["fixData","home"]}) %>
