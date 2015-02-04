@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <title><%= title %></title>
+    <style type="text/css">
+        body{
+            font-size: 16px;
+        }
+
+        /* 去掉列表前的标识, li 会继承 */
+        ul {
+            list-style:none;
+            margin:0;padding:0;
+        }
+
+        li{
+            margin:0;padding:0;
+        }
+
+        /* 去掉各Table  cell 的边距并让其边重合 */
+        table{
+            border-collapse:collapse;border-spacing:0;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        th,td{
+            height: 30px;
+        }
+
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>调查结果</h2>
+<div class="container">
+    <ul>
+        <% questionList.forEach(function(v){ %>
+        <li>
+            <p><%= v.qId %>. <%= v.qContent %></p>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>选项</th>
+                    <th>数据量</th>
+                    <th>百分比</th>
+                </tr>
+                </thead>
+
+                <tfoot>
+                <tr>
+                    <td>回答总数</td>
+                    <td colspan="2"><%= v.sum %></td>
+                </tr>
+                </tfoot>
+
+                <tbody>
+                <tr>
+                    <td><%= v.aContent %></td>
+                    <td><%= v.aNum %></td>
+                    <% if(v.sum>0){ %>
+                    <td><%= (v.aNum*100/v.sum).toFixed(2) %>% (男：<%= (v.aMNum*100/v.sum).toFixed(2) %>%，女：<%= ((v.aNum-v.aMNum)*100/v.sum).toFixed(2) %>%)</td>
+                    <% }else{ %>
+                    <td>0.00%</td>
+                    <% } %>
+                </tr>
+                <tr>
+                    <td><%= v.bContent %></td>
+                    <td><%= v.bNum %></td>
+                    <% if(v.sum>0){ %>
+                    <td><%= (v.bNum*100/v.sum).toFixed(2) %>% (男：<%= (v.bMNum*100/v.sum).toFixed(2) %>%，女：<%= ((v.bNum-v.bMNum)*100/v.sum).toFixed(2) %>%)</td>
+                    <% }else{ %>
+                    <td>0.00%</td>
+                    <% } %>
+                </tr>
+                <% if(v.cContent){ %>
+                <tr>
+                    <td><%= v.cContent %></td>
+                    <td><%= v.cNum %></td>
+                    <% if(v.sum>0){ %>
+                    <td><%= (v.cNum*100/v.sum).toFixed(2) %>% (男：<%= (v.cMNum*100/v.sum).toFixed(2) %>%，女：<%= ((v.cNum-v.cMNum)*100/v.sum).toFixed(2) %>%)</td>
+                    <% }else{ %>
+                    <td>0.00%</td>
+                    <% } %>
+                </tr>
+                <% } %>
+                <% if(v.dContent){ %>
+                <tr>
+                    <td><%= v.dContent %></td>
+                    <td><%= v.dNum %></td>
+                    <% if(v.sum>0){ %>
+                    <td><%= (v.dNum*100/v.sum).toFixed(2) %>% (男：<%= (v.dMNum*100/v.sum).toFixed(2) %>%，女：<%= ((v.dNum-v.dMNum)*100/v.sum).toFixed(2) %>%)</td>
+                    <% }else{ %>
+                    <td>0.00%</td>
+                    <% } %>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+    "MONGODB": {
+        "HOST": "127.0.0.1",
+        "PORT": ":27017",
+        "USER": "",
+        "PWD": "",
+        "DB": {
+            "weixin":{
+                "name" : "weixin_qn",
+                "TABLES": {
+                }
+            }
+        }
+    },
+    "defaultPath": "/",
+    "logPath":{
+        "basePath": "/logs/",
+        "defaultFileName": "app.log",
+        "debug": "debug.log",
+        "info": "info.log",
+        "warn": "warning.log",
+        "error": "error.log"
+
+    },
+
+    "contextPath": "",
+    "sessionKeys":{
+        "userIdKey": ""
+    }
+}
