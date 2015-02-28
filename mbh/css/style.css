@@ -1,0 +1,435 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /*10 ÷ 16 × 100% = 62.5%*/
+}
+
+body {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.displayNone{
+	display: none !important;
+}
+
+li{
+	list-style: none;
+}
+
+#avatar{
+	position: absolute;
+	left: -10000px;
+}
+
+#loading{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #3a6296;
+	z-index: 99999;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-align-items:center;
+	align-items:center;	
+	color: #fff;
+}
+
+#loading em{
+	position: absolute;
+	left: 30px;
+	top: 12px;
+	font-style: normal;
+	font-size: 1rem;
+}
+
+#first_page {
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: url(../images/first_page.jpg) no-repeat center top;
+	background-size: 100% 100%;
+}
+
+
+#begin {
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: url(../images/begin_bg.jpg) no-repeat center top;
+	background-size: 100% 100%;
+}
+
+#begin .enter{
+	position: absolute;
+	width: 40%;
+	height: 9%;
+	top: 40%;
+	left: 50%;
+	margin-left: -20%;
+	background: url(../images/begin_test.png) no-repeat center top;
+	background-size: 100% 100%;
+}
+
+#task_list{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/global_bg.jpg) no-repeat center top;
+	background-size: 100% 100%;
+}
+
+#task_list .logo{
+	position: absolute;
+	width: 100%;
+	height: 11.5%;
+	top: 3%;
+	left: 0;
+	background: url(../images/logo.png) no-repeat center top;
+	background-size: 100% 100%;
+}
+
+#task_list .top{
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	height: 48%;
+}
+
+#task_list .bottom{
+	position: absolute;
+	bottom: 6%;
+	width: 100%;
+	height: 18%;
+}
+
+#task_list #progress_bar{
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	height: 24%;
+	overflow: hidden;
+}
+
+#progress_bar .expression{
+	position: relative;
+	left: 0;
+	width: 24%;
+	height: 62%;
+	background: url(../images/expression1.png) no-repeat center top;
+	background-size: 80% 100%;
+	-webkit-transition: all 0.2s linear 0s;
+}
+
+#progress_bar .bar{
+	width: 72%;
+	height: 20%;
+	margin: 0 auto;
+	background-color: #000;
+	border-radius: 14px
+}
+
+#progress_bar .inner_bar{
+	width: 0;
+	height: 100%;
+	background-color: rgb(255, 194, 0);
+	border-radius: 15px;
+	-webkit-transition: all 0.2s linear 0s;
+}
+
+#progress_bar .serial_number{
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+#task_list .boy, #task_list .girl{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	float:left;
+}
+
+#task_list .boy{
+	background: url(../images/boy.png) no-repeat center center;
+	background-size: 60%;
+	border-right: 2px solid #fff;
+}
+
+#task_list .girl{
+	background: url(../images/girl.png) no-repeat center center;
+	background-size: 60%;
+}
+
+#task_list .left, #task_list .word, #task_list .right{
+	display: inline-block;
+	width: 30%;
+	height: 100%;
+	float:left;
+}
+
+#task_list .left{
+	background: url(../images/left.png) no-repeat center center;
+	background-size: 30%;
+}
+
+#task_list .word{
+	width: 40%;
+	background: url(../images/word.png) no-repeat center center;
+	background-size: 100%;
+}
+
+#task_list .right{
+	background: url(../images/right.png) no-repeat center center;
+	background-size: 30%;
+}
+
+#task_list li{
+	position: absolute;
+	top: 14%;
+	width: 100%;
+	color: #fff;
+	font-family: 'Arial Rounded MT bold','Arial Black';
+}
+
+#task_list .title {
+	position: relative;
+	padding: 20px 15px 30px 55px;
+	font-size: 1.8rem;
+}
+
+#task_list .title span{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 40px;
+	background-color: rgb(0, 173, 255);
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+
+.select_wrap {
+	min-width: 240px;
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.select_wrap p {
+	padding: 0 0 15px 40px;
+	background: url(../images/unselected.png) no-repeat 0 4px;
+	background-size: 1.6rem 1.6rem;
+}
+
+.select_wrap p.active {
+	background-image: url(../images/selected.png);
+	background-size: 1.6rem 1.6rem;
+}
+
+#result_list{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/result1.jpg) no-repeat center top;
+	background-size: 100% 100%;
+}
+
+#result_list .add_contact{
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+	height: 8%;
+	background: url(../images/add_contact.png) no-repeat center top;
+	background-size: 70% 100%;
+}
+
+/*开始页向上滑动箭头*/
+.arrow {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    z-index: 10000;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+}
+
+.arrow .afor-1 {
+    background-image: url(../images/arrowT.png);
+    background-repeat: no-repeat;
+}
+
+.arrow p {
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes start {
+    0%, 30% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px)
+    }
+}
+
+.arrow p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -14px 0 0 -18px;
+    width: 36.5px;
+    height: 25px;
+    background-size: 36.5px 25px;
+    -webkit-background-size: 36.5px 25px;
+}
+
+.animation-up{
+    -webkit-animation: move-up 0.6s linear;
+}
+
+@-webkit-keyframes move-up{
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+/*loading*/
+/*coffee cup*/
+.coffee_cup{
+    width: 20px;
+    height: 24px;
+    border: 1px rgba(255,255,255,1) solid;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    margin: 36px auto;
+    left: -30px;
+}
+.coffee_cup:after, .coffee_cup:before{
+    position: absolute;
+    content: "";
+}
+.coffee_cup:after{
+    width: 5px;
+    height: 12px;
+    border: 1px #fff solid;
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+    left: 20px;
+}
+.coffee_cup:before{
+    width: 1px;
+    height: 6px;
+    background-color: rgba(255,255,255,1);
+    top: -10px;
+    left: 4px;
+    box-shadow: 5px 0px 0px 0px rgba(255,255,255,1),
+                5px -5px 0px 0px rgba(255,255,255,1),
+                10px 0px 0px 0px rgba(255,255,255,1);
+    -webkit-animation: steam 1s linear infinite alternate;
+       -moz-animation: steam 1s linear infinite alternate;
+            animation: steam 1s linear infinite alternate;
+}
+
+@-webkit-keyframes steam{
+    0%{height: 0px;}
+    100%{height: 6px;}            
+}
+@-moz-keyframes steam{
+    0%{height: 0px}
+    100%{height: 6px;}            
+}
+@keyframes steam{
+    0%{height: 0px}
+    100%{height: 6px;}            
+}
+
+/*缩放出场 摇摆*/
+.rock{
+	-webkit-animation: grow 0.7s ease 0.4s 1, music-move 1s ease-in-out 1s infinite alternate;
+}
+
+@-webkit-keyframes music-move /* Safari and Chrome */
+{
+0% { 
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+33% {  
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+66% {  
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+100% {  
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+}
+@-webkit-keyframes grow /* Safari and Chrome */
+{
+0% {  
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+60% {  
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+80% {  
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+100% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+}
+
+/*首页翻书效果*/
+.animation-opacity{
+    -webkit-animation: opacity 10s linear;
+}
+
+@-webkit-keyframes opacity{
+    0% {
+       opacity: 1;
+    }
+    60%{
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*首页翻书效果*/
+.animation-rotate-left{-webkit-animation:rotate-left 10s ease-in;-webkit-transform-origin:0 50%;}
+
+@-webkit-keyframes rotate-left{0%{-webkit-transform:perspective(500px) rotateY(0deg)} 10%{-webkit-transform:perspective(500px) rotateY(-10deg)} 90%{-webkit-transform:perspective(500px) rotateY(-40deg)} 100%{-webkit-transform:perspective(1000px) rotateY(-90deg)}}

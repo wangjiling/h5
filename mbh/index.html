@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+	<title>快来测一测：你离过劳shi还有多远？</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<img id="avatar" src="images/share.jpg" alt="">
+	<div id="loading">
+		<div class="coffee_cup"><em>loading...</em></div>		
+	</div>	
+	<div id="wrap">
+		<div id="first_page"><div class="arrow"><p class="afor-1"></p></div></div>
+		<div id="begin">
+			<div class="enter"></div>
+		</div>
+
+		<ul id="task_list">
+			<div class="logo displayNone"></div>
+			<div id="select_sex" class="displayNone">
+				<div class="top">
+					<span class="boy" data-sex="男"></span>
+					<span class="girl" data-sex="女"></span>
+				</div>
+				<div class="bottom">
+					<span class="left" data-sex="男"></span>
+					<span class="word"></span>
+					<span class="right" data-sex="女"></span>
+				</div>
+			</div>
+			<li class="displayNone">
+				<p class="title"><span>Q1</span>你睡的正香，结果闹钟突然杀猪般地响了起来，你看了看时间，发现自己只睡了……</p>
+				<div class="select_wrap">
+					<p data-select="0">10小时</p>
+					<p data-select="10">7小时</p>
+					<p data-select="20">5小时</p>
+					<p data-select="30">不到5小时</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q2</span>耶~终于又下班了，今天你一共为老板卖命了多长时间？</p>
+				<div class="select_wrap">
+					<p data-select="0">8小时</p>
+					<p data-select="10">8~10小时</p>
+					<p data-select="20">10小时以上</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q3</span>你是否经常会临近下班时才发现，今天一天除了发呆几！乎！什！么！都！没！做！</p>
+				<div class="select_wrap">
+					<p data-select="15">经常</p>
+					<p data-select="5">偶尔</p>
+					<p data-select="0">从不</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q4</span>忙碌了一天，终于有时间休息了！你偏爱的床是？</p>
+				<div class="select_wrap">
+					<p data-select="-20">软床，软床舒服</p>
+					<p data-select="15">硬床，硬床解乏</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q5</span>你觉得自己每天睡的饱吗？</p>
+				<div class="select_wrap">
+					<p data-select="-20">能，每天早起精神焕发</p>
+					<p data-select="5">一般，经常性赖床</p>
+					<p data-select="15">睡不饱，每天起床脑袋都好沉！</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q6</span>你每天起床时是否会感觉浑身酸痛？</p>
+				<div class="select_wrap">
+					<p data-select="15">是，就好像一晚上没睡一样</p>
+					<p data-select="5">有，但是洗漱完就消失了</p>
+					<p data-select="0">没有，身体状态特别好！</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q7</span>据说用脑过度的人，普遍都很健忘，甚至连昨天发生了什么都不记得，你是否也经常出现这种情况？</p>
+				<div class="select_wrap">
+					<p data-select="0">不，我记性好得很！</p>
+					<p data-select="5">是，经常会拍半天脑袋想不起东西</p>
+					<p data-select="15">你说啥来着？</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q8</span>你最近是不是吃饭越来越没味道，即使口味非常适合自己的菜也像在吃马粪一样？</p>
+				<div class="select_wrap">
+					<p data-select="-10">不，我胃口很好，吃嘛嘛香</p>
+					<p data-select="5">偶尔会饿的时候什么也不想吃</p>
+					<p data-select="10">是，感觉吃什么都不香了</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q9</span>感觉免疫力在下降，春秋流感一来，自己绝逼都是首当其冲生病的那个？</p>
+				<div class="select_wrap">
+					<p data-select="10">是，天气一变就会重病</p>
+					<p data-select="5">偶尔会生病，但很快就痊愈</p>
+					<p data-select="-10">我身体很好，天气什么的影响不了我！</p>
+				</div>
+			</li>
+			<li class="displayNone">
+				<p class="title"><span>Q10</span>晚上经常做梦？</p>
+				<div class="select_wrap">
+					<p data-select="10">是，做梦的频率不受控制</p>
+					<p data-select="5">只是偶尔做梦</p>
+					<p data-select="0">我睡眠很好，极少做梦</p>
+				</div>
+			</li>
+			<div id="progress_bar" class="displayNone">
+				<div class="expression"></div>
+				<div class="bar"><div class="inner_bar"></div></div>
+				<span class="serial_number ">1/10</span>
+			</div>
+		</ul>
+		<div id="result_list" class="displayNone"><div class="add_contact"></div></div>
+	</div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?222ad09674d3ae40dd5aa72a5f4614ca";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</html>
