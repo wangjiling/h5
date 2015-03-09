@@ -1,0 +1,34 @@
+{
+    "MONGODB": {
+        "HOST": "127.0.0.1",
+        "PORT": ":27017",
+        "USER": "",
+        "PWD": "",
+        "DB": {
+            "weixin":{
+                "name" : "weixin_qn",
+                "TABLES": {
+                }
+            }
+        }
+    },
+    "defaultPath": "/",
+    "logPath":{
+        "basePath": "/logs/",
+        "defaultFileName": "app.log",
+        "debug": "debug.log",
+        "info": "info.log",
+        "warn": "warning.log",
+        "error": "error.log"
+
+    },
+
+    "contextPath": "",
+    "sessionKeys":{
+        "userIdKey": ""
+    },
+    "globalAPIParams":{
+        "appId":"wxde037b07f62b680f",
+        "appSecret":"dc5f326dd43767b55ba44b2cdb4bda36"
+    }
+}
