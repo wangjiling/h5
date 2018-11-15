@@ -1,0 +1,64 @@
+html, body, h1, h2, h3, h4, p, dl, dt, dd, ul, ol, li, form, input, button, textarea, select, label, table, td, div, span, a {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+* {
+  outline: 0 none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-appearance: none;
+}
+
+html, body {
+  font-family: PingFangSC-Regular,PostGrotesk-Book,-apple-system,BlinkMacSystemFont,Helvetica,"Microsoft Yahei","Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+}
+
+html, h1, h2, h3, h4, h5, h6, textarea, th {
+  border-radius: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+input, button, select {
+  font-family: PingFangSC-Regular,PostGrotesk-Book,-apple-system,BlinkMacSystemFont,Helvetica,"Microsoft Yahei","Helvetica Neue",Arial,sans-serif;
+  border: 0;
+  background: 0;
+  border-radius: 0;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+img {
+  -webkit-touch-callout: none;
+  vertical-align: middle;
+  border: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}

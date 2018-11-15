@@ -1,0 +1,48 @@
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<!--<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/shared/images/favicon/apple-touch-icon-57x57.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/shared/images/favicon/apple-touch-icon-114x114.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/shared/images/favicon/apple-touch-icon-72x72.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/shared/images/favicon/apple-touch-icon-144x144.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/shared/images/favicon/apple-touch-icon-60x60.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/shared/images/favicon/apple-touch-icon-120x120.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/shared/images/favicon/apple-touch-icon-76x76.png"/>-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/shared/images/favicon/apple-touch-icon-152x152.png"/>-->
+<!--<link rel="icon" type="image/png" href="/shared/images/favicon/favicon-196x196.png" sizes="196x196"/>-->
+<!--<link rel="icon" type="image/png" href="/shared/images/favicon/favicon-96x96.png" sizes="96x96"/>-->
+<!--<link rel="icon" type="image/png" href="/shared/images/favicon/favicon-32x32.png" sizes="32x32"/>-->
+<!--<link rel="icon" type="image/png" href="/shared/images/favicon/favicon-16x16.png" sizes="16x16"/>-->
+<!--<link rel="icon" type="image/png" href="/shared/images/favicon/favicon-128x128.png" sizes="128x128"/>-->
+<!--<meta name="msapplication-TileColor" content="#FFFFFF"/>-->
+<!--<meta name="msapplication-TileImage" content="/shared/images/favicon/mstile-144x144.png"/>-->
+<!--<meta name="msapplication-square70x70logo" content="/shared/images/favicon/mstile-70x70.png"/>-->
+<!--<meta name="msapplication-square150x150logo" content="/shared/images/favicon/mstile-150x150.png"/>-->
+<!--<meta name="msapplication-wide310x150logo" content="/shared/images/favicon/mstile-310x150.png"/>-->
+<!--<meta name="msapplication-square310x310logo" content="/shared/images/favicon/mstile-310x310.png"/>-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="application-name" content="IconTool"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="description" content="iconTool - 一键生成 APP 桌面图标 | 设计师效率辅助工具">
+
+<script type="text/javascript">
+    //var touchEvent = "ontouchend" in window ? "touchend" : "click";
+    var _remVal = 0;
+
+    !function(){
+        //初始化REM
+        var setFontSize = function(){
+            var width = document.documentElement.clientWidth;
+
+            width = width > 750 ? 750: width;
+            var fontSize = width/750 * 100;
+            document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+            _remVal = fontSize;
+        };
+        setFontSize();
+        window.addEventListener('resize', setFontSize);
+    }();
+</script>
+
+<link rel="stylesheet" href="/shared/font/css/font-awesome.min.css"/>

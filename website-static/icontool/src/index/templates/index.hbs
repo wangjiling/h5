@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>iconTool - 一键生成 APP 桌面图标 | 设计师效率辅助工具</title>
+
+    {{> head }}
+
+    <!-- build:css /index/css/index.css -->
+    <link rel="stylesheet" href="shared/css/libs/bootstrap.min.css"/>
+    <link rel="stylesheet" href="shared/css/libs/animate.min.css"/>
+    <link rel="stylesheet" href="shared/css/device.css"/>
+    <link rel="stylesheet" href="shared/css/reset.css"/>
+    <link rel="stylesheet" href="shared/css/base.css"/>
+    <link rel="stylesheet" href="shared/css/header.css"/>
+    <link rel="stylesheet" href="shared/css/footer.css"/>
+    <link rel="stylesheet" href="index/css/index.css"/>
+    <!-- endbuild -->
+</head>
+
+{{> header }}
+
+<div class="wrap">
+    <section id="section-slogan" class="section section-slogan">
+        <div class="container">
+            <div class="center-wrap">
+                <div class="bg-wrap">
+                    <img class="bg" src="/index/images/bg.png" />
+                </div>
+                <div class="slogan">
+                    <div class="detail">
+                        <!--<img class="icon-logo" src="/shared/images/svg/logo.svg" />-->
+                        <p class="tit-lg">iconTool</p>
+                        <p class="tit-sm">一键生成 APP 桌面图标</p>
+                    </div>
+                    <img class="phone" src="/index/images/bg.png" />
+                    <div class="update-log">
+                        <p class="des log-tit">v 1.1 更新日志</p>
+                        <p class="des">- 支持 PC 端传输图片到手机</p>
+                        <p class="des">- 优化用户体验</p>
+                        <p class="des">- 支持 MacOS 客户端</p>
+                    </div>
+                    <div class="slogan-download">
+                        <span class="btn app-ios">iOS 下载</span>
+                        <span class="btn app-macos">macOS 下载</span>
+                        <!--<span class="btn btn-download">下载体验</span>-->
+                        <!--<span class="btn phone" data-toggle="modal" data-target="#downloadModal">下载体验</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{> footer }}
+
+    <!--&lt;!&ndash; download dialog &ndash;&gt;-->
+    <!--<div id="download-dialog" class="download-dialog">-->
+        <!--<div class="download-wrap">-->
+            <!--<img class="ios-qrcode" src="/index/images/ios_qrcode.png" />-->
+            <!--<img class="googleplay-qrcode" src="/index/images/googleplay_qrcode.png" />-->
+            <!--<img class="ts-all app-ios ios" src="/index/images/svg/icon_apple_white.svg" />-->
+            <!--<img class="ts-all app-googleplay googleplay" src="/index/images/svg/icon_googleplay_white.svg" />-->
+            <!--<img class="ts-all app-android android" src="/index/images/svg/icon_android_white.svg" />-->
+        <!--</div>-->
+        <!--<i id="btn-download-close"></i>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; download modal &ndash;&gt;-->
+    <!--<div class="modal fade download-modal prevent-scroll" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="download-modal-label">-->
+        <!--<div class="modal-dialog" role="document">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-body">-->
+                    <!--<h2 class="modal-title section-title" id="download-modal-label"></h2>-->
+                    <!--<ul class="download-wrap">-->
+                        <!--<img class="ios-qrcode" src="/index/images/ios_qrcode.png" />-->
+                        <!--<img class="googleplay-qrcode" src="/index/images/googleplay_qrcode.png" />-->
+                        <!--<li class="app-ios is-table">-->
+                            <!--<img class="ios is-table-cell" src="/index/images/svg/icon_apple_white.svg" />-->
+                        <!--</li>-->
+                        <!--<li class="app-googleplay is-table">-->
+                            <!--<img class="ts-all app-googleplay googleplay" src="/index/images/svg/icon_googleplay_white.svg" />-->
+                        <!--</li>-->
+                        <!--<li class="app-android is-table">-->
+                            <!--<img class="android is-table-cell" src="/index/images/svg/icon_android_white.svg" />-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</div>
+
+</body>
+
+
+<!-- build:js /index/js/index.js -->
+<script src="shared/js/libs/jquery-1.11.2.min.js"></script>
+<script src="shared/js/libs/bootstrap.min.js"></script>
+<script src="shared/js/libs/jquery.face-cursor.min.js"></script>
+
+<script src="shared/js/util.js"></script>
+<script src="shared/js/PubSub.js"></script>
+<script src="shared/js/device.js"></script>
+<script src="shared/js/header.js"></script>
+<script src="shared/js/footer.js"></script>
+
+<script src="index/js/index.js"></script>
+<!-- endbuild -->
+</html>

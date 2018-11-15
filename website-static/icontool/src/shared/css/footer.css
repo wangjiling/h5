@@ -1,0 +1,143 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-family: Heebo-Light,PingFangSC-Light,PostGrotesk-Book,-apple-system,BlinkMacSystemFont,Helvetica,"Microsoft Yahei","Helvetica Neue",Arial,sans-serif;
+}
+
+.footer-top {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 100px 0;
+  background-color: #000;
+}
+
+.footer-top .logo {
+  display: block;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-top .op60 {
+  opacity: .6;
+}
+
+.footer-top .nav {
+  line-height: 60px;
+  text-align: right;
+}
+
+.footer-top .nav a {
+  display: inline-block;
+  padding: 0;
+  margin: 0 10px;
+  text-align: center;
+  color: #fff;
+  opacity: .2;
+}
+
+
+.footer-top .nav a img {
+  width: 26px;
+}
+
+.footer-top .nav a:last-child {
+  width: auto;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.footer-top .nav a:focus,
+.footer-top .nav a:hover {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  opacity: 1;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  line-height: 76px;
+  color: #fff;
+}
+
+.footer-bottom p {
+  opacity: .3;
+}
+
+.footer-bottom .copy-right {
+  text-align: left;
+}
+
+.footer-bottom .contact {
+  text-align: right;
+  float: right;
+}
+
+.footer-bottom p a {
+  color: #fff;
+}
+
+.footer-bottom p a:focus,
+.footer-bottom p a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+}
+
+
+
+@media (max-width: 992px) {
+  .footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .footer-top {
+    font-size: 0.22rem;
+    line-height: 0.3rem;
+    padding: 0.6rem 0;
+  }
+
+  .footer-top .logo {
+    margin: 0 auto 0.3rem;
+  }
+
+  .footer-top .nav {
+    /*display: none;*/
+    padding: 0;
+    text-align: center;
+    margin-top: 0.4rem;
+    line-height: 1;
+  }
+
+  .footer-top .nav a:last-child {
+    margin-right: 10px;
+  }
+
+  .footer-top .nav a img {
+    width: 0.4rem;
+  }
+
+  .footer-bottom .copy-right {
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  .footer-bottom .contact {
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  .footer-bottom .contact p {
+    opacity: .6;
+  }
+
+}

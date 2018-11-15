@@ -1,0 +1,442 @@
+.section-slogan {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+
+.section-slogan .container {
+    height: 100%;
+}
+
+.section-slogan .center-wrap {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section-slogan .center-wrap .bg-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.section-slogan .center-wrap .bg {
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    margin-top: 40px;
+}
+
+.section-slogan .center-wrap img.phone {
+    display: none;
+}
+
+.section-slogan .slogan {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.section-slogan .slogan .icon-logo {
+    position: relative;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.section-slogan .detail
+{
+    width: 300px;
+}
+
+.section-slogan .update-log {
+    margin-top: 80px;
+}
+
+.section-slogan .tit-sm {
+    opacity: .6;
+}
+
+.section-slogan .update-log .des {
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.section-slogan .update-log .des.log-tit {
+    margin-bottom: 20px;
+    opacity: .3;
+}
+
+.slogan-download {
+    position: relative;
+    z-index: 1;
+}
+
+.slogan-download .btn {
+    margin-right: 10px;
+    margin-top: 70px;
+    opacity: 1;
+
+    -webkit-box-shadow: 10px 20px 50px rgba(0,0,0,.2);
+    -moz-box-shadow: 10px 20px 50px rgba(0,0,0,.2);
+    box-shadow: 10px 20px 50px rgba(0,0,0,.2);
+}
+
+.slogan-download .btn:hover {
+    opacity: 1;
+}
+
+.slogan-download .btn:last-child {
+    margin-right: 0;
+}
+
+.slogan-download .btn.phone {
+    display: none;
+}
+
+/* download wrap */
+.download-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.download-wrap img {
+    display: inline-block;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.download-wrap img:hover {
+    opacity: 1;
+}
+
+.download-wrap img.ios-qrcode,
+.download-wrap img.googleplay-qrcode
+{
+    display: none;
+    width: 140px;
+    height: auto;
+    margin-right: 0;
+    cursor: default;
+    opacity: 1;
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    margin-left: -216px;
+}
+
+.download-wrap img.googleplay-qrcode {
+    margin-left: -70px;
+}
+
+.download-wrap img:last-child {
+    margin-right: 0!important;
+}
+
+/* download dialog*/
+.download-dialog {
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 9;
+    padding: 30px 0;
+
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+
+.download-dialog i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    margin-top: -10px;
+    background: url('/index/images/svg/icon_arrow_down.svg') center no-repeat;
+    background-size: 12px;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.download-dialog .download-wrap img {
+    margin-top: 0;
+}
+
+/* download modal */
+/* download modal */
+.modal-backdrop.in {
+    opacity: 0.4;
+    z-index: 9999;
+}
+
+.download-modal
+{
+    text-align: center;
+    z-index: 99999;
+}
+
+.download-modal.modal.fade .modal-dialog
+{
+    width: 960px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    -moz-transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+    -o-transform: translate(-50%, -100%);
+}
+
+.download-modal.modal.in .modal-dialog
+{
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.download-modal .modal-body {
+    padding: 0 60px;
+}
+
+.download-modal .modal-content {
+    border: 0 none;
+    border-radius: 6px;
+    background-color: #000;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.2);
+    box-shadow: 0 3px 9px rgba(0,0,0,.2);
+}
+
+.download-modal .modal-header {
+    border-bottom: 0;
+}
+
+@media (min-width: 1920px) {
+    .container {
+        width: 1680px;
+    }
+
+    .section-slogan .center-wrap .bg {
+        width: 1180px;
+        margin-top: 60px;
+    }
+
+    .section-slogan .slogan .icon-logo {
+        height: 40px;
+    }
+
+    .section-slogan .slogan .detail .tit-lg {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .section-slogan .update-log {
+        margin-top: 80px;
+    }
+
+    .section-slogan .tit-sm,
+    .section-slogan .update-log .des
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .slogan-download .btn {
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-backdrop.in,
+    .download-modal
+    {
+        display: none!important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .section-slogan {
+        height: auto!important;
+        padding: 1.2rem 0;
+    }
+
+    .section-slogan .center-wrap .bg {
+        display: none;
+    }
+
+    .section-slogan .center-wrap img.phone {
+        display: block;
+        width: 90%;
+        margin: .4rem auto;
+    }
+
+    .section-slogan .slogan {
+        position: relative;
+        left: 0;
+        top: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        text-align: center;
+    }
+
+    .section-slogan .update-log {
+        margin-top: 0;
+    }
+
+    .section-slogan .slogan .icon-logo {
+        height: .5rem;
+        margin-bottom: .2rem;
+    }
+
+    .section-slogan .slogan .detail .tit-lg {
+        font-size: 0.56rem;
+        line-height: 0.6rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .section-slogan .detail
+    {
+        display: block;
+        width: 100%;
+    }
+
+    .slogan-download {
+        text-align: center;
+    }
+
+    .slogan-download .btn {
+        margin-top: .6rem;
+    }
+
+    .slogan-download .btn {
+        /*display: none;*/
+    }
+
+    .slogan-download .btn.phone {
+        display: inline-block;
+    }
+
+    /* download dialog */
+    .download-dialog {
+        display: none!important;
+    }
+
+    /* download wrap */
+    .download-wrap img {
+        height: 0.8rem;
+        margin-right: 0.8rem;
+        opacity: 1;
+    }
+
+    .download-wrap img.ios-qrcode,
+    .download-wrap img.googleplay-qrcode
+    {
+        width: 2rem;
+        top: -1.4rem;
+        left: 50%;
+        margin-left: -1rem;
+    }
+
+    .download-wrap img.googleplay-qrcode {
+        top: 0.2rem;
+    }
+
+    /* download modal */
+    /* download modal */
+    .download-modal.modal.fade .modal-dialog {
+        width: 80%;
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+        -moz-transform: translate(-50%, -100%);
+        -webkit-transform: translate(-50%, -100%);
+        -o-transform: translate(-50%, -100%);
+    }
+
+    .download-modal.modal.in .modal-dialog{
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    .download-modal .modal-body {
+        padding: 0 0.6rem;
+    }
+
+    .download-modal .download-wrap img {
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .download-modal .download-wrap li {
+        width: 100%;
+        padding: 0.4rem 0;
+        cursor: pointer;
+    }
+
+    .download-modal .download-wrap li.app-ios,
+    .download-modal .download-wrap li.app-googleplay
+    {
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+
+    .download-modal .download-wrap .tit-sm {
+        display: inline-block;
+        font-size: 0.4rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        margin-bottom: 0;
+        color: #fff;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .section-slogan .center-wrap img.phone {
+        width: 80%;
+        margin: .2rem auto;
+    }
+
+    .section-slogan {
+        padding: .8rem 0;
+    }
+
+    .section-slogan .update-log {
+        margin-top: 0
+    }
+
+    .section-slogan .slogan .icon-logo {
+        height: .36rem;
+    }
+
+    .section-slogan .slogan .detail .tit-lg {
+        font-size: 0.5rem;
+        line-height: 0.6rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .slogan-download .btn {
+        margin-top: .4rem;
+    }
+}
