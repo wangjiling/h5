@@ -1,0 +1,29 @@
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="application-name" content="SwapEx"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<meta name="description" content="SwapEx - 最专业最好用的数字货币汇率工具">
+
+<script type="text/javascript">
+    //var touchEvent = "ontouchend" in window ? "touchend" : "click";
+    var _remVal = 0;
+
+    !function(){
+        //初始化REM
+        var setFontSize = function(){
+            var width = document.documentElement.clientWidth;
+
+            width = width > 450 ? 450: width;
+            var fontSize = width/750 * 100;
+            document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+            _remVal = fontSize;
+        };
+        setFontSize();
+        window.addEventListener('resize', setFontSize);
+    }();
+</script>
+
+<link rel="stylesheet" href="/shared/font/css/font-awesome.min.css"/>

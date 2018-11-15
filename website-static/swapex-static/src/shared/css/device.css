@@ -1,0 +1,29 @@
+/* default */
+.state-indicator {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+    z-index: 1;
+}
+
+/* small desktop */
+@media all and (max-width: 1200px) {
+    .state-indicator {
+        z-index: 2;
+    }
+}
+
+/* tablet */
+@media all and (max-width: 992px) {
+    .state-indicator {
+        z-index: 3;
+    }
+}
+
+/* phone */
+@media all and (max-width: 768px) {
+    .state-indicator {
+        z-index: 4;
+    }
+}
