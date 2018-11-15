@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+node_modules
+.temp
+build
+npm-debug.log*
+**/*.html
+!h5/**/*.html

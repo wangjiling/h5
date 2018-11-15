@@ -1,0 +1,35 @@
+.not-found-wrap {
+    text-align: center;
+    padding: 300px 0;
+    background-color: #101010;
+}
+
+.not-found-wrap p {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 60px;
+    font-family: Heebo-Regular,PingFangSC-Medium,PostGrotesk-Book,-apple-system,BlinkMacSystemFont,Helvetica,"Microsoft Yahei","Helvetica Neue",Arial,sans-serif;
+}
+
+.not-found-wrap a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+@media (max-width: 992px) {
+    .not-found-wrap {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .not-found-wrap p {
+        font-size: 0.56rem;
+        line-height: 0.78rem;
+        margin-bottom: 0.6rem;
+    }
+}
